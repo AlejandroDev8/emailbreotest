@@ -1,23 +1,6 @@
+import {sendEmail} from './action'
+
 export default function HomePage() {
-
-  async function sendEmail(formData: FormData) {
-    'use server'
-
-    const title = formData.get('title')
-    const to = formData.get('to')
-    const content = formData.get('content')
-
-    if (!title || !to || !content) {
-      return alert('Missing required fields')
-    }
-
-    console.log({
-      title,
-      to,
-      content
-    })
-
-  }
 
   return (
     <div className="flex justify-center items-center h-screen">
